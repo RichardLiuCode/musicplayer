@@ -8,10 +8,14 @@
 </head>
 
 <body>
-    <input id="file-selector" type="file" accept=".mp3, .wav">
+    <audio id="player">
+        <source id="player-source">
+    </audio>
+    <input id="file-selector" type="file" accept=".mp3, .wav, .m4a">
+    <button id="uploadBtn">Upload</button>
     <div class="play-area-wrapper">
         <button id="play-button">▶</button>
-        <input id="player-bar" type="range">
+        <input id="player-bar" type="range" min="0">
     </div>
 
 </body>
