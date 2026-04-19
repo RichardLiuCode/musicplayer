@@ -122,3 +122,34 @@ document.getElementById("closePlayerBtn").addEventListener("click", function () 
     document.querySelector(".homePage").style.display = "revert";
     document.querySelector(".playPage").style.display = "none";
 });
+
+document.getElementById("VolumeSlider").addEventListener("mousemove", function () {
+    player.volume = parseFloat(this.value);
+    document.getElementById("VolumeBar").value = this.value * 10;
+});
+
+document.getElementById("audioBtn").addEventListener("click", function () {
+    if (!player.muted) {
+        player.muted = true;
+        this.style.backgroundImage = "url(\"mutedAudio.png\")";
+    } else {
+        player.muted = false;
+        this.style.backgroundImage = "url(\"audio.png\")";
+    }
+});
+
+document.getElementById("loopBtn").addEventListener("click", function () {
+    if (!player.loop) {
+        player.loop = true;
+        this.style.backgroundImage = "url(\"loopOn.png\")";
+        this.style.backgroundSize = "95%";
+        this.style.backgroundPositionY = "0px";
+        this.title = "Repeat ON";
+    } else {
+        player.loop = false;
+        this.style.backgroundImage = "url(\"loopIcon.png\")";
+        this.style.backgroundSize = "50%";
+        this.style.backgroundPositionY = "5px";
+        this.title = "Repeat OFF";
+    }
+});
