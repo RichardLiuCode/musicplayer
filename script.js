@@ -48,7 +48,17 @@ document.getElementById("play-button").addEventListener("click", function () {
         player.pause();
     }
 });
+player.addEventListener("pause", function () {
+    document.getElementById("play-button").style.backgroundImage = "url(\"playIcon.png\")";
+    document.getElementById("play-button").backgroundSize = "70%";
+    isPlaying = false;
+});
 
+player.addEventListener("play", function () {
+    document.getElementById("play-button").style.backgroundImage = "url(\"pauseIcon.png\")";
+    document.getElementById("play-button").style.backgroundSize = "50%";
+    isPlaying = true;
+});
 
 function updateTimelineColor() {
     document.getElementById("videoProgressBar").max = document.getElementById("videoProgressBar").max;
