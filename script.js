@@ -50,7 +50,7 @@ document.getElementById("play-button").addEventListener("click", function () {
 });
 player.addEventListener("pause", function () {
     document.getElementById("play-button").style.backgroundImage = "url(\"playIcon.png\")";
-    document.getElementById("play-button").backgroundSize = "70%";
+    document.getElementById("play-button").style.backgroundSize = "70%";
     isPlaying = false;
 });
 
@@ -114,8 +114,8 @@ player.addEventListener("ended", function () {
 
 document.getElementById("closePlayerBtn").addEventListener("click", function () {
     if (isPlaying) {
-        this.style.backgroundImage = "url(\"playIcon.png\")";
-        this.style.backgroundSize = "70%";
+        document.getElementById("play-button").style.backgroundImage = "url(\"playIcon.png\")";
+        document.getElementById("play-button").style.backgroundSize = "70%";
         isPlaying = false;
         player.pause();
     }
