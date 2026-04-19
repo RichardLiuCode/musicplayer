@@ -181,12 +181,36 @@ body {
     background: none;
     margin-right: 10px;
     overflow: hidden;
+    position: relative;
+}
+
+.subtitleTransitionCoverLeft {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 7px;
+    height: 100%;
+    background: linear-gradient(to right, rgb(234, 232, 232), rgb(0, 0, 0, 0));
+    z-index: 2;
+}
+
+.subtitleTransitionCoverRight {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 7px;
+    height: 100%;
+    background: linear-gradient(to left, rgb(234, 232, 232), rgb(0, 0, 0, 0));
+    z-index: 2;
 }
 
 #subtitleText {
+    width: fit-content;
     font-size: 18px;
     font-family: arial;
     user-select: none;
+    white-space: nowrap;
+    z-index: 1;
 }
 
 #closePlayerBtn {

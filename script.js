@@ -5,8 +5,9 @@ let isTimelineBarDraging = false;
 let subtitlePosition = 0;
 setInterval(function () {
     document.getElementById("subtitleText").style.transform = `translateX(${subtitlePosition}px)`;
+    const subtitleTextWidth = Math.round(parseFloat(window.getComputedStyle(document.getElementById("subtitleText")).width)) + 10;
     subtitlePosition = subtitlePosition - 1;
-    if (subtitlePosition < -300) {
+    if (subtitlePosition < subtitleTextWidth * -1) {
         subtitlePosition = 200;
     }
 }, 40);
