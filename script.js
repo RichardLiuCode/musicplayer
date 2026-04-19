@@ -22,8 +22,8 @@ document.getElementById("uploadBtn").addEventListener("click", function () {
             document.querySelector(".homePage").style.display = "none";
             document.querySelector(".playPage").style.display = "flex";
             document.getElementById("subtitleText").textContent = audioName;
-            this.style.backgroundImage = "url(\"playIcon.png\")";
-            this.style.backgroundSize = "70%";
+            document.getElementById("play-button").style.backgroundImage = "url(\"playIcon.png\")";
+            document.getElementById("play-button").style.backgroundSize = "70%";
             isPlaying = false;
             if (isPlaying) {
                 player.pause();
