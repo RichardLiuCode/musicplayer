@@ -19,9 +19,17 @@ document.getElementById("uploadBtn").addEventListener("click", function () {
             const audio = file.target.result;
             document.getElementById("player-source").src = audio;
             player.load();
-            document.querySelector(".homePage").style.display = "none";
-            document.querySelector(".playPage").style.display = "flex";
-            document.getElementById("subtitleText").textContent = audioName;
+            player.onload = function () {
+                document.querySelector(".homePage").style.display = "none";
+                document.querySelector(".playPage").style.display = "flex";
+                document.getElementById("subtitleText").textContent = audioName;
+                this.style.backgroundImage = "url(\"playIcon.png\")";
+                this.style.backgroundSize = "70%";
+                isPlaying = false;
+                if (isPlaying) {
+                    player.pause();
+                }
+            };
         };
         reader.readAsDataURL(selectedFile);
     }
