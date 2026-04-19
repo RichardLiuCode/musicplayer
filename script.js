@@ -96,6 +96,9 @@ player.addEventListener("ended", function () {
 
 document.getElementById("closePlayerBtn").addEventListener("click", function () {
     if (isPlaying) {
+        this.style.backgroundImage = "url(\"playIcon.png\")";
+        this.style.backgroundSize = "70%";
+        isPlaying = false;
         player.pause();
     }
     document.querySelector(".homePage").style.display = "revert";
