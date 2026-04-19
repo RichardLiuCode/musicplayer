@@ -285,6 +285,25 @@ body {
     font-size: 15px;
 }
 
+#download {
+    position: absolute;
+    top: 40px;
+    right: 180px;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    border-radius: 10000px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(120, 120, 120);
+    background-color: white;
+    background-image: url("downloadIcon.png");
+    background-size: 60%;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-size: 15px;
+}
+
 #closePlayerBtn {
     cursor: pointer;
     position: fixed;

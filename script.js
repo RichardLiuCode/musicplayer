@@ -1,8 +1,10 @@
 const player = document.getElementById("player");
 const playerTimeline = document.getElementById("player-bar");
+let audioName = undefined;
 let isPlaying = false;
 let isTimelineBarDraging = false;
 let subtitlePosition = 0;
+
 setInterval(function () {
     document.getElementById("subtitleText").style.transform = `translateX(${subtitlePosition}px)`;
     const subtitleTextWidth = Math.round(parseFloat(window.getComputedStyle(document.getElementById("subtitleText")).width)) + 10;
@@ -13,7 +15,7 @@ setInterval(function () {
 }, 40);
 document.getElementById("uploadBtn").addEventListener("click", function () {
     const selectedFile = document.getElementById("file-selector").files[0];
-    const audioName = selectedFile.name;
+    audioName = selectedFile.name;
     if (selectedFile) {
         const reader = new FileReader();
         reader.onload = function (file) {
@@ -152,4 +154,11 @@ document.getElementById("loopBtn").addEventListener("click", function () {
         this.style.backgroundPositionY = "5px";
         this.title = "Repeat OFF";
     }
+});
+
+document.getElementById("download").addEventListener("click", function () {
+    const downloadAudioLink = document.createElement("a");
+    downloadAudioLink.href = document.getElementById("player-source").src;
+    downloadAudioLink.download = audioName;
+    downloadAudioLink.click();
 });
