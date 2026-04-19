@@ -5,9 +5,9 @@ let isTimelineBarDraging = false;
 let subtitlePosition = 0;
 setInterval(function () {
     document.getElementById("subtitleText").style.transform = `translateX(${subtitlePosition}px)`;
-    subtitlePosition = subtitlePosition + 1;
-    if (subtitlePosition > 200) {
-        subtitlePosition = -300;
+    subtitlePosition = subtitlePosition - 1;
+    if (subtitlePosition < -300) {
+        subtitlePosition = 200;
     }
 }, 40);
 document.getElementById("uploadBtn").addEventListener("click", function () {
