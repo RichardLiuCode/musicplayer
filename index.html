@@ -11,13 +11,27 @@
     <audio id="player">
         <source id="player-source">
     </audio>
-    <input id="file-selector" type="file" accept=".mp3, .wav, .m4a">
-    <button id="uploadBtn">Upload</button>
-    <div class="play-area-wrapper">
-        <button id="play-button">▶</button>
-        <input id="player-bar" type="range" min="0">
+    <div class="homePage">
+        <h1 class="title">Music Player</h1>
+        <div class="uploadForm">
+            <input id="file-selector" type="file" accept=".mp3, .wav, .m4a">
+            <button id="uploadBtn">Play</button>
+        </div>
     </div>
-
+    <div class="playPage">
+        <button id="closePlayerBtn">×</button>
+        <div class="play-area-wrapper">
+            <button id="play-button"></button>
+            <label id="timeDisplay">00&nbsp/&nbsp00</label>
+            <div class="timelinesWrapper">
+                <progress id="videoProgressBar" min="0" max="2" value="0"></progress>
+                <input id="player-bar" type="range" value="0" min="0" step="0.0000001">
+            </div>
+            <div class="subtitleDisplay">
+                <div id="subtitleText"></div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>

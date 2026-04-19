@@ -1,0 +1,212 @@
+* {
+    box-sizing: border-box;
+    outline: none;
+}
+
+html,
+body {
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.title {
+    font-family: arial;
+    color: gray;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.homePage {
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+
+.playPage {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+
+.uploadForm {
+    margin: 0 auto;
+    width: fit-content;
+    height: fit-content;
+    padding: 10px;
+    border-radius: 100px;
+    background-color: rgb(234, 232, 232);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#file-selector {
+    width: 500px;
+}
+
+#file-selector::-webkit-file-upload-button,
+#uploadBtn {
+    cursor: pointer;
+    width: 100px;
+    Height: 25px;
+    border-radius: 900px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: gray;
+    background-color: white;
+    font-size: 14px;
+    color: rgb(75, 75, 75);
+}
+
+.play-area-wrapper {
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    padding: 10px;
+    border-radius: 100px;
+    background-color: rgb(234, 232, 232);
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(209, 208, 208);
+    box-shadow: 0 0 3px 1px rgb(198, 197, 197);
+}
+
+.timelinesWrapper {
+    position: relative;
+    appearance: none;
+    cursor: pointer;
+    width: 450px;
+    height: 10px;
+    margin-right: 10px;
+    background: none;
+}
+
+#videoProgressBar {
+    position: absolute;
+    top: 3px;
+    left: 0px;
+    z-index: 1;
+    appearance: none;
+    cursor: pointer;
+    width: 100%;
+    height: 5px;
+    border-radius: 900px;
+    margin-right: 10px;
+    background: none;
+
+}
+
+#videoProgressBar::-webkit-progress-bar {
+    border-radius: 900px;
+}
+
+#videoProgressBar::-webkit-progress-value {
+    background-color: rgb(67, 135, 252);
+    border-radius: 900px;
+}
+
+#player-bar {
+    position: absolute;
+    top: 1px;
+    left: 0px;
+    z-index: 2;
+    appearance: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 900px;
+    margin: 0px;
+    background: none;
+}
+
+#player-bar::-webkit-slider-runnable-track {
+    appearance: none;
+    height: 5px;
+    padding: none;
+    background: none;
+    border-radius: 900px;
+}
+
+#player-bar::-webkit-slider-thumb {
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 30px;
+    margin-top: -3px;
+    background-color: rgb(67, 135, 252);
+    padding: none;
+}
+
+#play-button {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    border-radius: 10000px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(120, 120, 120);
+    background-color: white;
+    background-image: url("playIcon.png");
+    background-size: 70%;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-size: 15px;
+}
+
+#play-button:focus {
+    outline: none;
+}
+
+#timeDisplay {
+    font-size: 16px;
+    font-family: arial;
+    color: rgb(87, 87, 87);
+    user-select: none;
+}
+
+.subtitleDisplay {
+    width: 180px;
+    height: 20px;
+    background: none;
+    margin-right: 10px;
+    overflow: hidden;
+}
+
+#subtitleText {
+    font-size: 18px;
+    font-family: arial;
+    user-select: none;
+}
+
+#closePlayerBtn {
+    cursor: pointer;
+    position: fixed;
+    top: 5px;
+    right: 5px;
+    width: 30px;
+    height: 30px;
+    font-size: 25px;
+    font-family: arial;
+    color: lightgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    border: none;
+    border-radius: 5px;
+}
+
+#closePlayerBtn:hover {
+    background-color: red;
+}
