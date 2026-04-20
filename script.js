@@ -128,7 +128,7 @@ document.getElementById("closePlayerBtn").addEventListener("click", function () 
 document.getElementById("VolumeSlider").addEventListener("mousemove", function () {
     player.volume = parseFloat(this.value);
     document.getElementById("VolumeBar").value = this.value * 10;
-    this.title = `Volume ${document.getElementById("VolumeBar").value = this.value * 10}`;
+    this.title = `Volume ${this.value * 10}`;
 });
 
 document.getElementById("audioBtn").addEventListener("click", function () {
