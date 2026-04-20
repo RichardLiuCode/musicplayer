@@ -209,7 +209,8 @@ body {
 
 .subtitleDisplay {
     width: 180px;
-    height: 20px;
+    height: fit-content;
+    min-height: 16px;
     background: none;
     margin-right: 10px;
     overflow: hidden;
