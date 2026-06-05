@@ -382,4 +382,9 @@ body {
         left: 20px;
         width: calc(100% - 40px)
     }
+
+    #timeDisplay {
+        top: 30px;
+        left: 20px;
+    }
 }
