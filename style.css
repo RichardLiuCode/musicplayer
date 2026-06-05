@@ -8,7 +8,6 @@ body {
     margin: 0px;
     width: 100%;
     height: 100%;
-    min-width: 1010px;
     min-height: 100px;
 }
 
@@ -326,4 +325,61 @@ body {
 
 #closePlayerBtn:hover {
     background-color: rgba(255, 0, 0, 0.659);
+}
+
+@media(max-width:1010px) {
+    .play-area-wrapper {
+        width: 900px;
+    }
+
+    .timelinesWrapper {
+        width: 857px;
+    }
+}
+
+@media(max-width:900px) {
+    .play-area-wrapper {
+        width: 800px;
+    }
+
+    .timelinesWrapper {
+        width: 757px;
+    }
+}
+
+@media(max-width:800px) {
+    .play-area-wrapper {
+        width: 700px;
+    }
+
+    .timelinesWrapper {
+        width: 657px;
+    }
+}
+
+@media(max-width:700px) {
+    .play-area-wrapper {
+        width: 600px;
+    }
+
+    .timelinesWrapper {
+        width: 557px;
+    }
+}
+
+@media(max-width:600px) {
+    .play-area-wrapper {
+        width: 100%;
+        height: 200px;
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        border-radius: 0;
+        border: none;
+    }
+
+    .timelinesWrapper {
+        left: 20px;
+        width: calc(100% - 40px)
+    }
 }
