@@ -365,9 +365,17 @@ body {
     .timelinesWrapper {
         width: 557px;
     }
+
+    .uploadForm {
+        width: 600px;
+    }
 }
 
 @media(max-width:600px) {
+    .uploadForm {
+        width: 400px;
+    }
+
     .play-area-wrapper {
         width: 100%;
         height: 200px;
