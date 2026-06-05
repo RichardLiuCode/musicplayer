@@ -387,4 +387,27 @@ body {
         top: 30px;
         left: 20px;
     }
+
+    #play-button {
+        width: 50px;
+        height: 50px;
+        top: 50px;
+        left: calc(100% / 2 - 30px)
+    }
+
+    .subtitleDisplay {
+        left: 10px;
+        top: 162px;
+        width: calc(100% - 230px);
+    }
+
+    #download,
+    #loopBtn,
+    #audioBtn {
+        top: 160px;
+    }
+
+    .VolumeSettingsWrapper {
+        top: 170px;
+    }
 }
