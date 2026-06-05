@@ -89,7 +89,16 @@ playerTimeline.addEventListener("mousedown", function () {
     isTimelineBarDraging = true;
     updateTimelineColor();
 });
+playerTimeline.addEventListener("touchstart", function () {
+    isTimelineBarDraging = true;
+    updateTimelineColor();
+});
 playerTimeline.addEventListener("mouseup", function () {
+    isTimelineBarDraging = false;
+    player.currentTime = playerTimeline.value;
+    updateTimelineColor();
+});
+playerTimeline.addEventListener("touchend", function () {
     isTimelineBarDraging = false;
     player.currentTime = playerTimeline.value;
     updateTimelineColor();
