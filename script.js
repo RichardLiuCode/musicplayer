@@ -125,7 +125,7 @@ document.getElementById("closePlayerBtn").addEventListener("click", function () 
     document.querySelector(".playPage").style.display = "none";
 });
 
-document.getElementById("VolumeSlider").addEventListener("mousemove", function () {
+document.getElementById("VolumeSlider").addEventListener("input", function () {
     player.volume = parseFloat(this.value);
     document.getElementById("VolumeBar").value = this.value * 10;
     this.title = `Volume ${this.value * 10}`;
