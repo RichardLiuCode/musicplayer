@@ -371,6 +371,12 @@ body {
     }
 }
 
+@media(max-width:400px), (orientation:portrait) {
+    .uploadForm {
+        width: 300px;
+    }
+}
+
 @media(max-width:600px), (orientation:portrait) {
     .uploadForm {
         width: 400px;
