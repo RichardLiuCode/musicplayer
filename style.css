@@ -423,5 +423,6 @@ body {
 @media(max-width:400px) {
     .uploadForm {
         width: 300px;
+        display:none;
     }
 }
