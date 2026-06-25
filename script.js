@@ -16,6 +16,12 @@ setInterval(function () {
 document.getElementById("uploadBtn").addEventListener("click", function () {
     const selectedFile = document.getElementById("file-selector").files[0];
     audioName = selectedFile.name;
+
+    console.log(selectedFile.type);
+    if (selectedFile.type.includes("image") || selectedFile.type.includes("text")) {
+        alert("File Type Not Supported");
+        return;
+    };
     if (selectedFile) {
         const reader = new FileReader();
         reader.onload = function (file) {
