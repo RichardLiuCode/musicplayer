@@ -15,10 +15,11 @@ setInterval(function () {
 }, 40);
 document.getElementById("uploadBtn").addEventListener("click", function () {
     const selectedFile = document.getElementById("file-selector").files[0];
-    if (selectedFile.type.includes("image") || selectedFile.type.includes("text")) {
+    if (selectedFile.type.includes("image") || selectedFile.type.includes("text") || selectedFile.type.includes("application") || selectedFile.type.includes("message")) {
         alert("File Type Not Supported");
         return;
     };
+    console.log(selectedFile.type || "Cannot Find Type");
     audioName = selectedFile.name;
     if (selectedFile) {
         const reader = new FileReader();
