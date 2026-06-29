@@ -19,7 +19,7 @@ document.getElementById("uploadBtn").addEventListener("click", function () {
         alert("File Type Not Supported!\nOnly upload audio or video file");
         return;
     };
-     audioName = selectedFile.name;
+    audioName = selectedFile.name;
     if (selectedFile) {
         const reader = new FileReader();
         reader.onload = function (file) {
