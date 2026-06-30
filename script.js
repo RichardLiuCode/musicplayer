@@ -20,7 +20,7 @@ document.getElementById("uploadBtn").addEventListener("click", function () {
         return;
     };
     audioName = selectedFile.name;
-    console.log(selectedFile)
+    console.log(selectedFile);
     if (selectedFile) {
         const reader = new FileReader();
         reader.onload = function (file) {
